@@ -4,8 +4,9 @@ const Customer = require("./models/customer");
 const Order = require("./models/order");
 
 Customer.findAll().then((result) => {
-    console.log("All Customers " , result);
+  console.log("All Customers " , result);
 });
+
 // Customer.hasMany(Order);
 // let customerId = null;
 // sequelize
@@ -22,14 +23,7 @@ Customer.findAll().then((result) => {
 //   })
 //   .then((order) => {
 //     console.log("Order is : ", order);
-//     return Order.findAll({
-//         where: {
-//             CustomerId:{
-//                 [sequelize.Op.eq] : customerId
-//             }
-//         }
-
-//     });
+//     return Order.findAll({ where: customerId });
 //   })
 //   .then((orders) => {
 //     console.log("All the Orders are : ", orders);
